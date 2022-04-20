@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Главная - BGD layout v2</title>
+    <meta charset="UTF-8">
+    <meta id="mvp" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <script>function svp(){let e=screen.width<=320?"width=320,user-scalable=no":"width=device-width,initial-scale=1,maximum-scale=1";document.getElementById("mvp").setAttribute("content",e)}svp();window.onresize=function(n){svp()}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap">
+    <link rel="stylesheet" href="./css/normalize.min.css">
+    <link rel="stylesheet" href="./css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="./css/common.min.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container container">
+        <div class="row">
+          <div class="col-6">
+            <div class="header__logo">
+              <div class="logo"><a href="index.html"><img class="logo__image" src="./images/logo.svg" alt=""></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="page">
+      <p>Home</p>
+    </main>
+    <footer class="footer"></footer>
+    <script src="./js/jquery3.min.js" defer></script>
+    <script src="./js/bootstrap.bundle.min.js" defer></script>
+    <script src="./js/vue3.js" defer></script>
+    <script src="./js/common.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,89 @@
+:root {
+  --primary: #4E5B67;
+  --black: #101F33;
+  --white: #FFFFFF;
+  --divider: #EAEFF3;
+  --purple: #9C3CE7;
+  --alizarin: #E74C3C;
+  --nonactive: #878F99;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--dark);
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.16s ease;
+}
+
+p {
+  font-size: 14px;
+  line-height: 143%;
+  margin-top: 0;
+}
+
+p:last-of-type {
+  margin-bottom: 0;
+}
+
+h1,
+.like-h1 {
+  font-weight: 700;
+}
+
+h2,
+.like-h2 {
+  font-weight: 700;
+}
+
+h3,
+.like-h3 {
+  font-weight: 700;
+}
+
+h4,
+.like-h4 {
+  font-weight: 700;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  transition: top 0.2s ease, opacity 0.2s ease, visibility 0.2s ease;
+  z-index: 100;
+  top: 100% !important;
+  transform: none !important;
+}
+
+.dropdown-menu.show {
+  opacity: 1;
+  visibility: visible;
+  top: calc(100% + 12px) !important;
+}
+
+.dropdown-menu-end {
+  --bs-position: end;
+  right: 0 !important;
+  left: auto !important;
+}
+
+.logo__image {
+  display: block;
+}

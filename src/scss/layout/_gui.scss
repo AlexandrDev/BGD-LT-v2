@@ -1,0 +1,24 @@
+:root {
+    --primary: #4E5B67;
+    --black: #101F33;
+    --white: #FFFFFF;
+    --divider: #EAEFF3;
+    --purple: #9C3CE7;
+    --alizarin: #E74C3C;
+    --nonactive: #878F99;
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--dark);
+}
+
+img {
+    max-width: 100%;
+}

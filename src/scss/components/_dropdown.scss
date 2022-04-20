@@ -1,0 +1,22 @@
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    transition: top $transitionBlocks, opacity $transitionBlocks, visibility $transitionBlocks;
+    z-index: 100;
+    top: 100% !important; // bootstrap overrides
+    transform: none !important; // bootstrap overrides
+
+    &.show {
+        opacity: 1;
+        visibility: visible;
+        top: calc(100% + 12px) !important; // bootstrap overrides
+    }
+
+    &-end {
+        --bs-position: end;
+        right: 0 !important; // bootstrap overrides
+        left: auto !important; // bootstrap overrides
+    }
+}
