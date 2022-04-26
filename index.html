@@ -259,18 +259,43 @@
       </div>
     </header>
     <main class="page">
-      <section class="container">fw slider</section>
+      <section class="container">main slider</section>
       <section class="container">capsules slider</section>
-      <section class="container">new products slider</section>
+      <section class="container">products slider</section>
+      <section class="container">promo block</section>
+      <section class="container">products slider</section>
+      <section class="container">categories grid</section>
     </main>
     <footer class="footer">
-      <div class="subscribe-form">
-        <div class="like-h2">Получи 500 ₽ на любой заказ за подписку</div>
+      <div class="footer__subscribe-form">
+        <div class="container">
+          <div class="subscribe-form">
+            <div class="subscribe-form__title like-h2">Получи 500 ₽ на любой заказ за подписку</div>
+            <div class="subscribe-form__form">
+              <div class="subscribe-form__input-item">
+                <input class="input" type="email" placeholder="Укажите свой email">
+                <div class="subscribe-form__checkbox checkbox-item">
+                  <input class="checkbox" type="checkbox" id="subscription-privacy">
+                  <label for="subscription-privacy">Я даю согласие на обработку своих персональных данных</label>
+                </div>
+              </div>
+              <div class="subscribe-form__button">
+                <button class="button button_white">Подписаться на рассылку</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="footer__container container">
         <div class="footer__menus row">
               <div class="footer-menu col-xl-4">
-                <div class="footer-menu__title like-h3">Клиентам</div>
+                <div class="footer-menu__title like-h3">Клиентам
+                  <div class="footer-menu__title-arrow">
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#arrow"></use>
+                    </svg>
+                  </div>
+                </div>
                 <ul class="footer-menu__items">
                   <li class="footer-menu__item"><a href="#">Оплата</a></li>
                   <li class="footer-menu__item"><a href="#">Доставка</a></li>
@@ -280,7 +305,13 @@
                 </ul>
               </div>
               <div class="footer-menu col-xl-4">
-                <div class="footer-menu__title like-h3">О компании</div>
+                <div class="footer-menu__title like-h3">О компании
+                  <div class="footer-menu__title-arrow">
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#arrow"></use>
+                    </svg>
+                  </div>
+                </div>
                 <ul class="footer-menu__items">
                   <li class="footer-menu__item"><a href="#">Об основателе</a></li>
                   <li class="footer-menu__item"><a href="#">История</a></li>
@@ -290,7 +321,13 @@
                 </ul>
               </div>
               <div class="footer-menu col-xl-4">
-                <div class="footer-menu__title like-h3">Партнерам</div>
+                <div class="footer-menu__title like-h3">Партнерам
+                  <div class="footer-menu__title-arrow">
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#arrow"></use>
+                    </svg>
+                  </div>
+                </div>
                 <ul class="footer-menu__items">
                   <li class="footer-menu__item"><a href="#">Александр Богданов</a></li>
                   <li class="footer-menu__item"><a href="#">История</a></li>

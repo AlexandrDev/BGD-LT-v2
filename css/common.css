@@ -1,6 +1,7 @@
 :root {
   --primary: #4E5B67;
   --black: #101F33;
+  --gray: #787885;
   --white: #FFFFFF;
   --divider: #EAEFF3;
   --purple: #9C3CE7;
@@ -76,6 +77,109 @@ h3 {
 h4 {
   font-weight: 600;
   font-size: 14px;
+}
+
+.input {
+  width: 100%;
+  height: 40px;
+  padding: 0 5px 0 10px;
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--primary);
+  border: 0;
+  outline: 0;
+  background: #F4F4F4;
+  border-radius: 3px;
+  transition: all 0.2s ease;
+}
+
+.input:-ms-input-placeholder {
+  color: var(--gray);
+}
+
+.input::placeholder,
+.input::-ms-input-placeholder,
+.input::-moz-placeholder {
+  color: var(--gray);
+}
+
+.input[readonly] {
+  opacity: 0.3 !important;
+}
+
+/*
+  Checkbox
+ */
+
+.checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.checkbox + label {
+  --checkbox-color: var(--black);
+  position: relative;
+  display: inline-flex;
+  cursor: pointer;
+}
+
+.checkbox + label::before,
+.checkbox + label::after {
+  content: "";
+  display: block;
+  width: 15px;
+  height: 15px;
+}
+
+.checkbox + label::before {
+  flex-shrink: 0;
+  margin-top: 2px;
+  margin-right: 12px;
+  border: 1.3px solid var(--checkbox-color);
+  border-radius: 2px;
+}
+
+.checkbox + label::after {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  opacity: 0;
+  background-color: var(--checkbox-color);
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='8' fill='none'%3E%3Cpath fill-rule='evenodd' d='M9.642.223a.65.65 0 0 1-.032.919L3.36 6.975a.65.65 0 0 1-.887 0L.39 5.031a.65.65 0 0 1 .887-.95l1.64 1.531L8.723.191a.65.65 0 0 1 .919.032z' fill='%23101f33'/%3E%3C/svg%3E") center/auto no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='8' fill='none'%3E%3Cpath fill-rule='evenodd' d='M9.642.223a.65.65 0 0 1-.032.919L3.36 6.975a.65.65 0 0 1-.887 0L.39 5.031a.65.65 0 0 1 .887-.95l1.64 1.531L8.723.191a.65.65 0 0 1 .919.032z' fill='%23101f33'/%3E%3C/svg%3E") center/auto no-repeat;
+  transition: opacity 0.16s ease;
+  z-index: 1;
+}
+
+.checkbox:checked + label::after {
+  opacity: 1;
+}
+
+.checkbox:disabled + label,
+.checkbox.disabled + label {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 45px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 12px 20px;
+  border: 1px solid;
+  background: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.button_white {
+  color: var(--white);
+  border-color: var(--white);
 }
 
 .header {
@@ -473,6 +577,14 @@ h4 {
   padding-bottom: 40px;
 }
 
+.footer__subscribe-form {
+  background-color: var(--active);
+}
+
+.footer__subscribe-form .container {
+  --bs-gutter-x: 15px;
+}
+
 .footer__menus {
   padding-bottom: 10px;
 }
@@ -511,6 +623,11 @@ h4 {
   padding-bottom: 15px;
 }
 
+.footer-menu__title-arrow {
+  width: 25px;
+  height: 25px;
+}
+
 .footer-menu__items {
   margin: 0;
   padding: 5px 0 15px;
@@ -522,10 +639,33 @@ h4 {
 }
 
 .subscribe-form {
+  margin-left: auto;
+  margin-right: auto;
   padding-top: 50px;
   padding-bottom: 50px;
-  background-color: var(--active);
   color: var(--white);
+}
+
+.subscribe-form__title {
+  text-align: center;
+  line-height: 30px;
+}
+
+.subscribe-form__form {
+  margin-top: 30px;
+}
+
+.subscribe-form__checkbox {
+  margin-top: 15px;
+}
+
+.subscribe-form__checkbox label {
+  --checkbox-color: var(--white);
+}
+
+.subscribe-form__button {
+  margin-top: 30px;
+  text-align: center;
 }
 
 .dropdown-menu {
@@ -613,6 +753,18 @@ body.has-bottom-navbar {
   color: var(--black);
 }
 
+@media (min-width: 640px) {
+  .subscribe-form {
+    width: 480px;
+  }
+}
+
+@media (min-width: 770px) {
+  .subscribe-form {
+    width: 560px;
+  }
+}
+
 @media (min-width: 1200px) {
   .footer__container {
     padding-bottom: 80px;
@@ -630,11 +782,32 @@ body.has-bottom-navbar {
   .footer__bottom {
     padding-top: 20px;
   }
+
+  .footer-menu__title-arrow {
+    display: none;
+  }
+
+  .subscribe-form {
+    width: 540px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .subscribe-form {
+    width: 700px;
+  }
 }
 
 @media (max-width: 1199.98px) {
   .footer-menu:not(:last-child) {
     border-bottom: 1px solid var(--divider);
+  }
+
+  .footer-menu__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
   }
 
   .footer-menu__items {

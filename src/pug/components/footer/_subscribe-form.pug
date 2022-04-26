@@ -1,2 +1,10 @@
 .subscribe-form
-  .like-h2 Получи 500 ₽ на любой заказ за подписку
+  .subscribe-form__title.like-h2 Получи 500 ₽ на любой заказ за подписку
+  .subscribe-form__form
+    .subscribe-form__input-item
+      input(type="email", placeholder="Укажите свой email").input
+      .subscribe-form__checkbox.checkbox-item
+        input(type="checkbox")#subscription-privacy.checkbox
+        label(for="subscription-privacy") Я даю согласие на обработку своих персональных данных
+    .subscribe-form__button
+      button.button.button_white Подписаться на рассылку

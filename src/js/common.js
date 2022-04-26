@@ -84,4 +84,36 @@ $(function($) {
     new Search()
 
 
+    /*
+     * Footer menu
+     */
+    const FooterMenu = function () {
+        let isMobile = function () {
+            return window.innerWidth < 1200;
+        }
+
+        let initSliding = function ($title, $content) {
+            if (isMobile()) {
+                $title.on(click_event, function () {
+                    $content.slideToggle(200)
+                })
+            } else {
+                $title.unbind(click_event)
+                $content.slideDown(200)
+            }
+        }
+
+        $('.footer-menu').each(function () {
+            const $title = $(this).find('> .footer-menu__title'),
+              $content = $(this).find('> .footer-menu__items');
+
+            initSliding($title, $content)
+
+            // $(window).resize(function () {
+            //     initSliding($title, $content)
+            // })
+        })
+    }
+
+    new FooterMenu()
 })

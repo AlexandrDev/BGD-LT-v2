@@ -1,6 +1,45 @@
 .subscribe-form {
+    margin-left: auto;
+    margin-right: auto;
     padding-top: 50px;
     padding-bottom: 50px;
-    background-color: var(--active);
     color: var(--white);
+
+    @include tablet-min {
+        width: 480px;
+    }
+
+    @include laptop-min {
+        width: 560px;
+    }
+
+    @include desktop-min {
+        width: 540px;
+    }
+
+    @include desktop-xxl-min {
+        width: 700px;
+    }
+
+    &__title {
+        text-align: center;
+        line-height: 30px;
+    }
+
+    &__form {
+        margin-top: 30px;
+    }
+
+    &__checkbox {
+        margin-top: 15px;
+
+        label {
+            --checkbox-color: var(--white);
+        }
+    }
+
+    &__button {
+        margin-top: 30px;
+        text-align: center;
+    }
 }

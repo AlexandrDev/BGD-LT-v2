@@ -1,3 +1,19 @@
 .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 45px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 12px 20px;
+    border: 1px solid;
+    background: none;
+    outline: none;
+    cursor: pointer;
 
+    &_white {
+        color: var(--white);
+        border-color: var(--white);
+    }
 }

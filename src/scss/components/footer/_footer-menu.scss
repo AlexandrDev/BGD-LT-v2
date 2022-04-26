@@ -8,6 +8,22 @@
     &__title {
         padding-top: 15px;
         padding-bottom: 15px;
+
+        @include desktop {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+        }
+
+        &-arrow {
+            width: 25px;
+            height: 25px;
+
+            @include desktop-min {
+                display: none;
+            }
+        }
     }
 
     &__items {

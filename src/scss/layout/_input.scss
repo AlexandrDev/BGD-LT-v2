@@ -1,3 +1,77 @@
 .input {
+    width: 100%;
+    height: 40px;
+    padding: 0 5px 0 10px;
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--primary);
+    border: 0;
+    outline: 0;
+    background: #F4F4F4;
+    border-radius: 3px;
+    transition: all $transitionBlocks;
 
+    &::placeholder,
+    &::-ms-input-placeholder,
+    &::-moz-placeholder {
+        color: var(--gray);
+    }
+
+    &[readonly] {
+        opacity: 0.3!important;
+    }
+}
+
+
+/*
+  Checkbox
+ */
+.checkbox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+
+    + label {
+        --checkbox-color: var(--black);
+        position: relative;
+        display: inline-flex;
+        cursor: pointer;
+
+        &::before,
+        &::after {
+            content: '';
+            display: block;
+            width: 15px;
+            height: 15px;
+        }
+
+        &::before {
+            flex-shrink: 0;
+            margin-top: 2px;
+            margin-right: 12px;
+            border: 1.3px solid var(--checkbox-color);
+            border-radius: 2px;
+        }
+
+        &::after {
+            position: absolute;
+            top: 2px;
+            left: 0;
+            opacity: 0;
+            background-color: var(--checkbox-color);
+            mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='8' fill='none'%3E%3Cpath fill-rule='evenodd' d='M9.642.223a.65.65 0 0 1-.032.919L3.36 6.975a.65.65 0 0 1-.887 0L.39 5.031a.65.65 0 0 1 .887-.95l1.64 1.531L8.723.191a.65.65 0 0 1 .919.032z' fill='%23101f33'/%3E%3C/svg%3E") center/auto no-repeat;
+            transition: opacity $transitionLink;
+            z-index: 1;
+        }
+    }
+
+    &:checked + label::after {
+        opacity: 1;
+    }
+
+    &:disabled + label,
+    &.disabled + label {
+        opacity: 0.3;
+        pointer-events: none;
+    }
 }

@@ -11,6 +11,14 @@
         }
     }
 
+    &__subscribe-form {
+        background-color: var(--active);
+
+        .container {
+            --bs-gutter-x: 15px;
+        }
+    }
+
     &__menus {
         padding-bottom: 10px;
 
