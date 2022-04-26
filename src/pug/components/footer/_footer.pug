@@ -1,0 +1,26 @@
+mixin footer-menu(title, items)
+  .footer-menu()&attributes(attributes)
+    .footer-menu__title.like-h3= title
+    ul.footer-menu__items
+      for item in items
+        li.footer-menu__item
+          a(href="#")= item
+
+footer.footer
+  include _subscribe-form
+
+  .footer__container.container
+    .footer__menus.row
+      +footer-menu('Клиентам', ['Оплата', 'Доставка', 'Возврат', 'Политика конфиденциальности', 'Правила обработки персональных данных']).col-xl-4
+      +footer-menu('О компании', ['Об основателе', 'История', 'Новости', 'Пресса о нас', 'Контакты']).col-xl-4
+      +footer-menu('Партнерам', ['Александр Богданов', 'История', 'Новости', 'Пресса о нас', 'Контакты']).col-xl-4
+    .footer__socials
+      include ../../components/_socials
+    .footer__bottom
+      .footer__copyright
+        | © 2022, Alexander Bogdanov.
+        br
+        | Все права защищены
+      .footer__creator
+        | Создание дизайна —!{' '}
+        span Кожевников

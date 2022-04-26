@@ -1,0 +1,40 @@
+- var menu_main_links = ['Одежда', 'Аксессуары', 'Коллекции', 'Адреса магазинов', 'О нас', 'Контакты', 'Оптовым покупателям'];
+- var menu_sub_links = ['Блузы, топы и рубашки', 'Брюки, шорты и комбинезоны', 'Сумки', 'Настроение города, осень-зима ‘20/21'];
+
+.main-menu.main-menu_has_city
+  .main-menu__overlay
+  .main-menu__inner
+    .main-menu__top
+      .main-menu__close-btn
+        +svg('close')
+
+    .main-menu-city
+      .main-menu-city__row Ваш город:
+        span.main-menu-city__current Санкт-Петербург
+
+    .main-menu__content
+      .main-menu__items
+        for main in menu_main_links
+          .main-menu-item.main-menu-item_parent
+            .main-menu-item__link
+              a(href=links.catalog)= main
+              .main-menu-item__arrow
+                +svg('arrow')
+            .main-menu-item__submenu
+              for sub in menu_sub_links
+                .main-menu-item__submenu-link
+                  a(href=links.catalog)= sub
+
+      .main-menu-bottom
+        .main-menu-bottom__title.like-h4 Вам нужна помощь?
+        .main-menu-bottom__group
+          p Позвоните нам по телефону:
+          a(href="#") 8 800 551 90 50
+          p.worktime С 10:00 до 22:00 по московскому времени
+        .main-menu-bottom__group
+          p Напишите на e-mail:
+          a(href="#") int.shop@bgd-bogdanov.com
+
+      .main-menu-bottom
+        .main-menu-bottom__title.like-h4 СОЦИАЛЬНЫЕ СЕТИ
+        include ../../components/_socials

@@ -1,0 +1,17 @@
+.bottom-navbar
+  a(href=links.catalog).bottom-navbar-btn
+    .bottom-navbar-btn__icon
+      +svg('catalog').bottom-navbar-btn__icon-svg
+    .bottom-navbar-btn__label Каталог
+  a(href=links.favourite).bottom-navbar-btn
+    .bottom-navbar-btn__icon
+      +svg('favourite').bottom-navbar-btn__icon-svg
+    .bottom-navbar-btn__label Избранное
+  a(href=links.cart).bottom-navbar-btn
+    .bottom-navbar-btn__icon.bottom-navbar-btn__icon_indicator
+      +svg('cart').bottom-navbar-btn__icon-svg
+    .bottom-navbar-btn__label 16 200 ₽
+  a(href=links.account).bottom-navbar-btn
+    .bottom-navbar-btn__icon
+      +svg('user').bottom-navbar-btn__icon-svg
+    .bottom-navbar-btn__label Войти

@@ -1,0 +1,76 @@
+.main-menu {
+    $_opened: & + '-opened';
+    $_has_city: & + '_has_city';
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    z-index: 30;
+    visibility: hidden;
+    transition: visibility $transitionMainMenu;
+
+    #{$_opened} & {
+        visibility: visible;
+    }
+
+    &__overlay {
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        transition: opacity $transitionMainMenu;
+
+        #{$_opened} & {
+            opacity: 1;
+        }
+    }
+
+    &__inner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        max-width: 640px;
+        width: 100%;
+        background-color: var(--white);
+        transform: translateX(-100%);
+        transition: transform $transitionMainMenu;
+
+        #{$_opened} & {
+            transform: translateX(0);
+        }
+    }
+    
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        height: 40px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    &__close-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+    }
+
+    &__content {
+        height: calc(100vh - 40px);
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 30px;
+        overflow-y: auto;
+
+        #{$_has_city} & {
+            height: calc(100vh - 95px);
+        }
+    }
+}

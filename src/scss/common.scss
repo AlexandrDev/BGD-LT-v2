@@ -8,7 +8,22 @@
 @import "layout/button";
 
 @import "components/header/header";
+@import "components/header/header-top-info";
+@import "components/header/logo";
+@import "components/header/hamburger";
+@import "components/header/header-button";
+@import "components/header/main-menu/main-menu";
+@import "components/header/main-menu/main-menu-item";
+@import "components/header/main-menu/main-menu-city";
+@import "components/header/main-menu/main-menu-bottom";
+@import "components/header/search/search";
+@import "components/header/search/search-row";
+@import "components/header/search/search-history";
+@import "components/header/search/search-suggestions";
 @import "components/footer/footer";
+@import "components/footer/footer-menu";
+@import "components/footer/subscribe-form";
 
 @import "components/dropdown";
-@import "components/logo";
+@import "components/socials";
+@import "components/bottom-navbar";

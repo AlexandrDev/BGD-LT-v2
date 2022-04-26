@@ -1,0 +1,28 @@
+.footer-menu {
+    &:not(:last-child) {
+        @include desktop {
+            border-bottom: 1px solid var(--divider);
+        }
+    }
+
+    &__title {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    &__items {
+        margin: 0;
+        padding: 5px 0 15px;
+        list-style: none;
+
+        @include desktop {
+            display: none;
+        }
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+    }
+}

@@ -1,0 +1,10 @@
+.socials {
+    &__items {
+        display: flex;
+        column-gap: 15px;
+    }
+
+    &__item {
+        line-height: 40px;
+    }
+}

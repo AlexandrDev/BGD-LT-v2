@@ -1,0 +1,21 @@
+.header-button {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+
+    &__icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 25px;
+        height: 25px;
+        margin: 3px auto 0;
+    }
+
+    &__label {
+        margin-top: 2px;
+        font-size: 11px;
+        line-height: 10px;
+        text-align: center;
+    }
+}

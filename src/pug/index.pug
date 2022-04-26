@@ -1,7 +1,14 @@
-extends ./layout/_layout
+extends layout/_layout
 
 block variables
   - var title = 'Главная'
 
 block content
-  p Home
+  section.container
+    | fw slider
+
+  section.container
+    | capsules slider
+
+  section.container
+    | new products slider

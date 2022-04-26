@@ -2,7 +2,7 @@ include ../mixins/_svg
 
 block variables
 - var images_path = './images/'
-- var links = {'home': 'index.html', 'page': 'page.html'}
+- var links = {'home': 'index.html', 'catalog': 'index.html', 'cart': 'index.html', 'account': 'index.html', 'favourite': 'index.html'}
 
 doctype html
 html(lang="ru")
@@ -18,13 +18,14 @@ html(lang="ru")
     link(rel="stylesheet" href='./css/normalize.min.css')
     link(rel="stylesheet" href='./css/bootstrap-grid.min.css')
     link(rel="stylesheet" href='./css/common.min.css')
-  body
-    include _header
+  body.has-bottom-navbar
+    include ../components/header/_header
 
     main.page
       block content
 
-    include _footer
+    include ../components/footer/_footer
+    include ../components/_bottom-navbar
 
     script(src="./js/jquery3.min.js", defer)
     script(src="./js/bootstrap.bundle.min.js", defer)

@@ -5,8 +5,6 @@ a {
 }
 
 p {
-    font-size: 14px;
-    line-height: 143%;
     margin-top: 0;
 
     &:last-of-type {
@@ -14,9 +12,30 @@ p {
     }
 }
 
-@for $i from 1 through 4 {
-    h#{$i},
-    .like-h#{$i} {
-        font-weight: 700;
-    }
+.h-36,
+.like-h1,
+h1 {
+    font-weight: 700;
+    font-size: 36px;
+}
+
+.h-24,
+.like-h2,
+h2 {
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.h-18,
+.like-h3,
+h3 {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.h-14,
+.like-h4,
+h4 {
+    font-weight: 600;
+    font-size: 14px;
 }

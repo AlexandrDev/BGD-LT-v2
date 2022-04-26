@@ -1,0 +1,30 @@
+.search-history {
+    margin-top: 30px;
+
+    &__items {
+        margin-top: 10px;
+    }
+
+    &__item {
+        padding-top: 11px;
+        padding-bottom: 11px;
+
+        &:not(:last-child) {
+            border-bottom: 1px solid var(--divider);
+        }
+
+        &-row {
+            align-items: center;
+        }
+
+        &-remove {
+
+
+            &-icon {
+                display: block;
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+}

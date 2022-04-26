@@ -1,0 +1,20 @@
+.main-menu-city {
+    display: flex;
+    align-items: center;
+    height: 55px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background: #828F9A;
+
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 10px;
+        font-weight: 600;
+        color: var(--white);
+    }
+
+    &__current {
+        font-weight: 400;
+    }
+}

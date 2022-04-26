@@ -1,0 +1,25 @@
+header.header
+  .header__container.container
+    .header-top-info
+      p БЕСПЛАТНАЯ ДОСТАВКА — ПРИМЕРКА ПЕРЕД ПОКУПКОЙ
+
+    .header-main.row
+      .header-main__left.col
+        .header-button(data-main-menu-open)
+          .header-button__icon
+            +svg('hamburger')
+          .header-button__label Меню
+
+      .header-main__logo.col
+        .logo
+          a(href=links.home)
+            img(src=images_path + "logo.svg", alt="").logo__image
+
+      .header-main__right.col
+        .header-button(data-search-open)
+          .header-button__icon
+            +svg('search')
+          .header-button__label Поиск
+
+  include _mobile-menu
+  include _search
