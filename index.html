@@ -10,9 +10,10 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap">
     <link rel="stylesheet" href="./css/normalize.min.css">
     <link rel="stylesheet" href="./css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="./css/swiper.min.css">
     <link rel="stylesheet" href="./css/common.min.css">
   </head>
-  <body class="has-bottom-navbar">
+  <body>
     <header class="header">
       <div class="header__container container">
         <div class="header-top-info">
@@ -20,163 +21,182 @@
         </div>
         <div class="header-main row">
           <div class="header-main__left col">
-            <div class="header-button" data-main-menu-open>
+            <div class="header-button header-button_icon d-xl-none" data-mobile-menu-open>
               <div class="header-button__icon">
-                <svg>
+                <svg class="icon-hamburger">
                   <use xlink:href="./images/sprite.svg#hamburger"></use>
                 </svg>
               </div>
               <div class="header-button__label">Меню</div>
-            </div>
+            </div><a class="header-button header-button_link d-none d-xl-flex" href="#">
+              <div class="header-button__label">Каталог</div></a><a class="header-button header-button_link d-none d-xl-flex" href="#">
+              <div class="header-button__label">Адреса магазинов</div></a><a class="header-button header-button_link d-none d-xl-flex" href="#">
+              <div class="header-button__label">О нас</div></a><a class="header-button header-button_link d-none d-xl-flex" href="#">
+              <div class="header-button__label">Контакты</div></a>
           </div>
           <div class="header-main__logo col">
             <div class="logo"><a href="index.html"><img class="logo__image" src="./images/logo.svg" alt=""></a></div>
           </div>
-          <div class="header-main__right col">
-            <div class="header-button" data-search-open>
+          <div class="header-main__right col"><a class="header-button header-button_icon d-none d-xl-block" href="#">
               <div class="header-button__icon">
-                <svg>
+                <svg class="icon-user">
+                  <use xlink:href="./images/sprite.svg#user"></use>
+                </svg>
+              </div>
+              <div class="header-button__label">Войти</div></a>
+            <div class="header-button header-button_icon" data-search-open>
+              <div class="header-button__icon">
+                <svg class="icon-search">
                   <use xlink:href="./images/sprite.svg#search"></use>
                 </svg>
               </div>
               <div class="header-button__label">Поиск</div>
-            </div>
+            </div><a class="header-button header-button_icon d-none d-xl-block" href="#">
+              <div class="header-button__icon">
+                <svg class="icon-favourite">
+                  <use xlink:href="./images/sprite.svg#favourite"></use>
+                </svg>
+              </div>
+              <div class="header-button__label">Избранное</div></a><a class="header-button header-button_icon d-none d-xl-block" href="#">
+              <div class="header-button__icon header-button__icon_indicator">
+                <svg class="icon-cart">
+                  <use xlink:href="./images/sprite.svg#cart"></use>
+                </svg>
+              </div>
+              <div class="header-button__label">16 200 ₽</div></a>
           </div>
         </div>
       </div>
-      <div class="main-menu main-menu_has_city">
-        <div class="main-menu__overlay"></div>
-        <div class="main-menu__inner">
-          <div class="main-menu__top">
-            <div class="main-menu__close-btn">
-              <svg>
+      <div class="mobile-menu">
+        <div class="mobile-menu__overlay"></div>
+        <div class="mobile-menu__inner">
+          <div class="mobile-menu__top">
+            <div class="mobile-menu__close-btn">
+              <svg class="icon-close">
                 <use xlink:href="./images/sprite.svg#close"></use>
               </svg>
             </div>
           </div>
-          <div class="main-menu-city">
-            <div class="main-menu-city__row">Ваш город:<span class="main-menu-city__current">Санкт-Петербург</span></div>
-          </div>
-          <div class="main-menu__content">
-            <div class="main-menu__items">
-              <div class="main-menu-item main-menu-item_parent">
-                <div class="main-menu-item__link"><a href="index.html">Одежда</a>
-                  <div class="main-menu-item__arrow">
-                    <svg>
+          <div class="mobile-menu__content">
+            <div class="mobile-menu__items">
+              <div class="mobile-menu-item mobile-menu-item_parent">
+                <div class="mobile-menu-item__link"><a href="index.html">Одежда</a>
+                  <div class="mobile-menu-item__arrow">
+                    <svg class="icon-arrow">
                       <use xlink:href="./images/sprite.svg#arrow"></use>
                     </svg>
                   </div>
                 </div>
-                <div class="main-menu-item__submenu">
-                  <div class="main-menu-item__submenu-link"><a href="index.html">Блузы, топы и рубашки</a></div>
-                  <div class="main-menu-item__submenu-link"><a href="index.html">Брюки, шорты и комбинезоны</a></div>
-                  <div class="main-menu-item__submenu-link"><a href="index.html">Сумки</a></div>
-                  <div class="main-menu-item__submenu-link"><a href="index.html">Настроение города, осень-зима ‘20/21</a></div>
+                <div class="mobile-menu-item__submenu">
+                  <div class="mobile-menu-item__submenu-link"><a href="index.html">Блузы, топы и рубашки</a></div>
+                  <div class="mobile-menu-item__submenu-link"><a href="index.html">Брюки, шорты и комбинезоны</a></div>
+                  <div class="mobile-menu-item__submenu-link"><a href="index.html">Сумки</a></div>
+                  <div class="mobile-menu-item__submenu-link"><a href="index.html">Настроение города, осень-зима ‘20/21</a></div>
                 </div>
               </div>
-              <div class="main-menu-item main-menu-item_parent">
-                <div class="main-menu-item__link"><a href="index.html">Аксессуары</a>
-                  <div class="main-menu-item__arrow">
-                    <svg>
+              <div class="mobile-menu-item mobile-menu-item_parent">
+                <div class="mobile-menu-item__link"><a href="index.html">Аксессуары</a>
+                  <div class="mobile-menu-item__arrow">
+                    <svg class="icon-arrow">
                       <use xlink:href="./images/sprite.svg#arrow"></use>
                     </svg>
                   </div>
                 </div>
-                <div class="main-menu-item__submenu">
-                  <div class="main-menu-item__submenu-link"><a href="index.html">Блузы, топы и рубашки</a></div>
-                  <div class="main-menu-item__submenu-link"><a href="index.html">Брюки, шорты и комбинезоны</a></div>
-                  <div class="main-menu-item__submenu-link"><a href="index.html">Сумки</a></div>
-                  <div class="main-menu-item__submenu-link"><a href="index.html">Настроение города, осень-зима ‘20/21</a></div>
+                <div class="mobile-menu-item__submenu">
+                  <div class="mobile-menu-item__submenu-link"><a href="index.html">Блузы, топы и рубашки</a></div>
+                  <div class="mobile-menu-item__submenu-link"><a href="index.html">Брюки, шорты и комбинезоны</a></div>
+                  <div class="mobile-menu-item__submenu-link"><a href="index.html">Сумки</a></div>
+                  <div class="mobile-menu-item__submenu-link"><a href="index.html">Настроение города, осень-зима ‘20/21</a></div>
                 </div>
               </div>
-              <div class="main-menu-item main-menu-item_parent">
-                <div class="main-menu-item__link"><a href="index.html">Коллекции</a>
-                  <div class="main-menu-item__arrow">
-                    <svg>
+              <div class="mobile-menu-item mobile-menu-item_parent">
+                <div class="mobile-menu-item__link"><a href="index.html">Коллекции</a>
+                  <div class="mobile-menu-item__arrow">
+                    <svg class="icon-arrow">
                       <use xlink:href="./images/sprite.svg#arrow"></use>
                     </svg>
                   </div>
                 </div>
-                <div class="main-menu-item__submenu">
-                  <div class="main-menu-item__submenu-link"><a href="index.html">Блузы, топы и рубашки</a></div>
-                  <div class="main-menu-item__submenu-link"><a href="index.html">Брюки, шорты и комбинезоны</a></div>
-                  <div class="main-menu-item__submenu-link"><a href="index.html">Сумки</a></div>
-                  <div class="main-menu-item__submenu-link"><a href="index.html">Настроение города, осень-зима ‘20/21</a></div>
+                <div class="mobile-menu-item__submenu">
+                  <div class="mobile-menu-item__submenu-link"><a href="index.html">Блузы, топы и рубашки</a></div>
+                  <div class="mobile-menu-item__submenu-link"><a href="index.html">Брюки, шорты и комбинезоны</a></div>
+                  <div class="mobile-menu-item__submenu-link"><a href="index.html">Сумки</a></div>
+                  <div class="mobile-menu-item__submenu-link"><a href="index.html">Настроение города, осень-зима ‘20/21</a></div>
                 </div>
               </div>
-              <div class="main-menu-item main-menu-item_parent">
-                <div class="main-menu-item__link"><a href="index.html">Адреса магазинов</a>
-                  <div class="main-menu-item__arrow">
-                    <svg>
+              <div class="mobile-menu-item mobile-menu-item_parent">
+                <div class="mobile-menu-item__link"><a href="index.html">Адреса магазинов</a>
+                  <div class="mobile-menu-item__arrow">
+                    <svg class="icon-arrow">
                       <use xlink:href="./images/sprite.svg#arrow"></use>
                     </svg>
                   </div>
                 </div>
-                <div class="main-menu-item__submenu">
-                  <div class="main-menu-item__submenu-link"><a href="index.html">Блузы, топы и рубашки</a></div>
-                  <div class="main-menu-item__submenu-link"><a href="index.html">Брюки, шорты и комбинезоны</a></div>
-                  <div class="main-menu-item__submenu-link"><a href="index.html">Сумки</a></div>
-                  <div class="main-menu-item__submenu-link"><a href="index.html">Настроение города, осень-зима ‘20/21</a></div>
+                <div class="mobile-menu-item__submenu">
+                  <div class="mobile-menu-item__submenu-link"><a href="index.html">Блузы, топы и рубашки</a></div>
+                  <div class="mobile-menu-item__submenu-link"><a href="index.html">Брюки, шорты и комбинезоны</a></div>
+                  <div class="mobile-menu-item__submenu-link"><a href="index.html">Сумки</a></div>
+                  <div class="mobile-menu-item__submenu-link"><a href="index.html">Настроение города, осень-зима ‘20/21</a></div>
                 </div>
               </div>
-              <div class="main-menu-item main-menu-item_parent">
-                <div class="main-menu-item__link"><a href="index.html">О нас</a>
-                  <div class="main-menu-item__arrow">
-                    <svg>
+              <div class="mobile-menu-item mobile-menu-item_parent">
+                <div class="mobile-menu-item__link"><a href="index.html">О нас</a>
+                  <div class="mobile-menu-item__arrow">
+                    <svg class="icon-arrow">
                       <use xlink:href="./images/sprite.svg#arrow"></use>
                     </svg>
                   </div>
                 </div>
-                <div class="main-menu-item__submenu">
-                  <div class="main-menu-item__submenu-link"><a href="index.html">Блузы, топы и рубашки</a></div>
-                  <div class="main-menu-item__submenu-link"><a href="index.html">Брюки, шорты и комбинезоны</a></div>
-                  <div class="main-menu-item__submenu-link"><a href="index.html">Сумки</a></div>
-                  <div class="main-menu-item__submenu-link"><a href="index.html">Настроение города, осень-зима ‘20/21</a></div>
+                <div class="mobile-menu-item__submenu">
+                  <div class="mobile-menu-item__submenu-link"><a href="index.html">Блузы, топы и рубашки</a></div>
+                  <div class="mobile-menu-item__submenu-link"><a href="index.html">Брюки, шорты и комбинезоны</a></div>
+                  <div class="mobile-menu-item__submenu-link"><a href="index.html">Сумки</a></div>
+                  <div class="mobile-menu-item__submenu-link"><a href="index.html">Настроение города, осень-зима ‘20/21</a></div>
                 </div>
               </div>
-              <div class="main-menu-item main-menu-item_parent">
-                <div class="main-menu-item__link"><a href="index.html">Контакты</a>
-                  <div class="main-menu-item__arrow">
-                    <svg>
+              <div class="mobile-menu-item mobile-menu-item_parent">
+                <div class="mobile-menu-item__link"><a href="index.html">Контакты</a>
+                  <div class="mobile-menu-item__arrow">
+                    <svg class="icon-arrow">
                       <use xlink:href="./images/sprite.svg#arrow"></use>
                     </svg>
                   </div>
                 </div>
-                <div class="main-menu-item__submenu">
-                  <div class="main-menu-item__submenu-link"><a href="index.html">Блузы, топы и рубашки</a></div>
-                  <div class="main-menu-item__submenu-link"><a href="index.html">Брюки, шорты и комбинезоны</a></div>
-                  <div class="main-menu-item__submenu-link"><a href="index.html">Сумки</a></div>
-                  <div class="main-menu-item__submenu-link"><a href="index.html">Настроение города, осень-зима ‘20/21</a></div>
+                <div class="mobile-menu-item__submenu">
+                  <div class="mobile-menu-item__submenu-link"><a href="index.html">Блузы, топы и рубашки</a></div>
+                  <div class="mobile-menu-item__submenu-link"><a href="index.html">Брюки, шорты и комбинезоны</a></div>
+                  <div class="mobile-menu-item__submenu-link"><a href="index.html">Сумки</a></div>
+                  <div class="mobile-menu-item__submenu-link"><a href="index.html">Настроение города, осень-зима ‘20/21</a></div>
                 </div>
               </div>
-              <div class="main-menu-item main-menu-item_parent">
-                <div class="main-menu-item__link"><a href="index.html">Оптовым покупателям</a>
-                  <div class="main-menu-item__arrow">
-                    <svg>
+              <div class="mobile-menu-item mobile-menu-item_parent">
+                <div class="mobile-menu-item__link"><a href="index.html">Оптовым покупателям</a>
+                  <div class="mobile-menu-item__arrow">
+                    <svg class="icon-arrow">
                       <use xlink:href="./images/sprite.svg#arrow"></use>
                     </svg>
                   </div>
                 </div>
-                <div class="main-menu-item__submenu">
-                  <div class="main-menu-item__submenu-link"><a href="index.html">Блузы, топы и рубашки</a></div>
-                  <div class="main-menu-item__submenu-link"><a href="index.html">Брюки, шорты и комбинезоны</a></div>
-                  <div class="main-menu-item__submenu-link"><a href="index.html">Сумки</a></div>
-                  <div class="main-menu-item__submenu-link"><a href="index.html">Настроение города, осень-зима ‘20/21</a></div>
+                <div class="mobile-menu-item__submenu">
+                  <div class="mobile-menu-item__submenu-link"><a href="index.html">Блузы, топы и рубашки</a></div>
+                  <div class="mobile-menu-item__submenu-link"><a href="index.html">Брюки, шорты и комбинезоны</a></div>
+                  <div class="mobile-menu-item__submenu-link"><a href="index.html">Сумки</a></div>
+                  <div class="mobile-menu-item__submenu-link"><a href="index.html">Настроение города, осень-зима ‘20/21</a></div>
                 </div>
               </div>
             </div>
-            <div class="main-menu-bottom">
-              <div class="main-menu-bottom__title like-h4">Вам нужна помощь?</div>
-              <div class="main-menu-bottom__group">
+            <div class="mobile-menu-bottom">
+              <div class="mobile-menu-bottom__title like-h4">Вам нужна помощь?</div>
+              <div class="mobile-menu-bottom__group">
                 <p>Позвоните нам по телефону:</p><a href="#">8 800 551 90 50</a>
                 <p class="worktime">С 10:00 до 22:00 по московскому времени</p>
               </div>
-              <div class="main-menu-bottom__group">
+              <div class="mobile-menu-bottom__group">
                 <p>Напишите на e-mail:</p><a href="#">int.shop@bgd-bogdanov.com</a>
               </div>
             </div>
-            <div class="main-menu-bottom">
-              <div class="main-menu-bottom__title like-h4">СОЦИАЛЬНЫЕ СЕТИ</div>
+            <div class="mobile-menu-bottom">
+              <div class="mobile-menu-bottom__title like-h4">СОЦИАЛЬНЫЕ СЕТИ</div>
               <div class="socials">
                 <div class="socials__items"><a class="socials__item" href="#">Vkontakte</a><a class="socials__item" href="#">YouTube</a></div>
               </div>
@@ -193,9 +213,43 @@
                 <input class="search-row__input" placeholder="Поиск">
               </div>
               <div class="search-row__clear col-auto"><a href="#">
-                  <svg class="search-row__clear-icon">
+                  <svg class="icon-close search-row__clear-icon">
                     <use xlink:href="./images/sprite.svg#close"></use>
                   </svg></a></div>
+            </div>
+            <div class="search-results">
+              <div class="search-results__items">
+                <div class="search-results__item"><a class="card-product" href="#">
+                          <div class="card-product__image"><img src="./images/product.jpg"></div>
+                          <div class="card-product__caption">
+                            <div class="card-product__title">Спортивный костюм “Красота”</div>
+                            <div class="card-product__prices">
+                              <div class="card-product__price card-product__price_old">16 999</div>
+                              <div class="card-product__price">16 999 ₽</div>
+                            </div>
+                          </div></a>
+                </div>
+                <div class="search-results__item"><a class="card-product" href="#">
+                          <div class="card-product__image"><img src="./images/product.jpg"></div>
+                          <div class="card-product__caption">
+                            <div class="card-product__title">Спортивный костюм “Красота”</div>
+                            <div class="card-product__prices">
+                              <div class="card-product__price card-product__price_old">16 999</div>
+                              <div class="card-product__price">16 999 ₽</div>
+                            </div>
+                          </div></a>
+                </div>
+                <div class="search-results__item"><a class="card-product" href="#">
+                          <div class="card-product__image"><img src="./images/product.jpg"></div>
+                          <div class="card-product__caption">
+                            <div class="card-product__title">Спортивный костюм “Красота”</div>
+                            <div class="card-product__prices">
+                              <div class="card-product__price card-product__price_old">16 999</div>
+                              <div class="card-product__price">16 999 ₽</div>
+                            </div>
+                          </div></a>
+                </div>
+              </div>
             </div>
             <div class="search-history">
               <div class="search-history__top row">
@@ -209,7 +263,7 @@
                   <div class="search-history__item-row row">
                     <div class="search-history__item-query col"><a href="#">Query</a></div>
                     <div class="search-history__item-remove col-auto"><a href="#">
-                        <svg class="search-history__item-remove-icon">
+                        <svg class="icon-close search-history__item-remove-icon">
                           <use xlink:href="./images/sprite.svg#close"></use>
                         </svg></a></div>
                   </div>
@@ -218,7 +272,7 @@
                   <div class="search-history__item-row row">
                     <div class="search-history__item-query col"><a href="#">Query</a></div>
                     <div class="search-history__item-remove col-auto"><a href="#">
-                        <svg class="search-history__item-remove-icon">
+                        <svg class="icon-close search-history__item-remove-icon">
                           <use xlink:href="./images/sprite.svg#close"></use>
                         </svg></a></div>
                   </div>
@@ -227,7 +281,7 @@
                   <div class="search-history__item-row row">
                     <div class="search-history__item-query col"><a href="#">Query</a></div>
                     <div class="search-history__item-remove col-auto"><a href="#">
-                        <svg class="search-history__item-remove-icon">
+                        <svg class="icon-close search-history__item-remove-icon">
                           <use xlink:href="./images/sprite.svg#close"></use>
                         </svg></a></div>
                   </div>
@@ -236,22 +290,11 @@
                   <div class="search-history__item-row row">
                     <div class="search-history__item-query col"><a href="#">Query</a></div>
                     <div class="search-history__item-remove col-auto"><a href="#">
-                        <svg class="search-history__item-remove-icon">
+                        <svg class="icon-close search-history__item-remove-icon">
                           <use xlink:href="./images/sprite.svg#close"></use>
                         </svg></a></div>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div class="search-suggestions">
-              <div class="search-suggestions__top row">
-                <div class="search-suggestions__title col">
-                  <div class="like-h4">В тренде/Актуально</div>
-                </div>
-                <div class="search-suggestions__clear col-auto"><a class="search-suggestions__clear-btn" href="#">Очистить</a></div>
-              </div>
-              <div class="search-suggestions__items">
-                <div class="search-suggestions__item"></div>
               </div>
             </div>
           </div>
@@ -259,12 +302,460 @@
       </div>
     </header>
     <main class="page">
-      <section class="container">main slider</section>
-      <section class="container">capsules slider</section>
-      <section class="container">products slider</section>
-      <section class="container">promo block</section>
-      <section class="container">products slider</section>
-      <section class="container">categories grid</section>
+      <section class="main-slider swiper">
+        <div class="main-slider__slides swiper-wrapper">
+          <div class="slide swiper-slide">
+            <div class="slide__background">
+              <picture>
+                <source srcset="./images/main-banner-xs.jpg" media="(max-width: 480px)">
+                <source srcset="./images/main-banner-md.jpg" media="(max-width: 770px)">
+                <source srcset="./images/main-banner-xl.jpg" media="(max-width: 1200px)"><img src="./images/main-banner.jpg">
+              </picture>
+            </div>
+            <div class="slide__content">
+              <div class="slide__container container">
+                <div class="slide__overtitle like-h5">Коллекция весна-лето 2022 1</div>
+                <div class="slide__title like-h2">Прогуляйтесь по «Таинственному саду» и найдите свой сказочный образ! 1</div>
+                <div class="slide__button"><a class="button button_white" href="#">Перейти к коллекции 1</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="slide swiper-slide">
+            <div class="slide__background">
+              <picture>
+                <source srcset="./images/main-banner-xs.jpg" media="(max-width: 480px)">
+                <source srcset="./images/main-banner-md.jpg" media="(max-width: 770px)">
+                <source srcset="./images/main-banner-xl.jpg" media="(max-width: 1200px)"><img src="./images/main-banner.jpg">
+              </picture>
+            </div>
+            <div class="slide__content">
+              <div class="slide__container container">
+                <div class="slide__overtitle like-h5">Коллекция весна-лето 2022 2</div>
+                <div class="slide__title like-h2">Прогуляйтесь по «Таинственному саду» и найдите свой сказочный образ! 2</div>
+                <div class="slide__button"><a class="button button_white" href="#">Перейти к коллекции 2</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="slide swiper-slide">
+            <div class="slide__background">
+              <picture>
+                <source srcset="./images/main-banner-xs.jpg" media="(max-width: 480px)">
+                <source srcset="./images/main-banner-md.jpg" media="(max-width: 770px)">
+                <source srcset="./images/main-banner-xl.jpg" media="(max-width: 1200px)"><img src="./images/main-banner.jpg">
+              </picture>
+            </div>
+            <div class="slide__content">
+              <div class="slide__container container">
+                <div class="slide__overtitle like-h5">Коллекция весна-лето 2022 3</div>
+                <div class="slide__title like-h2">Прогуляйтесь по «Таинственному саду» и найдите свой сказочный образ! 3</div>
+                <div class="slide__button"><a class="button button_white" href="#">Перейти к коллекции 3</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination container"></div>
+      </section>
+      <section class="cards-slider-section container">
+        <div class="cards-slider-section__head">
+          <div class="cards-slider-section__title like-h3">Впечатления</div>
+          <div class="cards-slider-section__more"><a class="link link_more" href="#">Показать больше
+              <svg class="icon-arrow link__icon">
+                <use xlink:href="./images/sprite.svg#arrow"></use>
+              </svg></a></div>
+        </div>
+        <div class="cards-slider cards-slider_capsule swiper">
+          <div class="cards-slider__slides swiper-wrapper"><a class="card-capsule swiper-slide" href="#">
+              <div class="card-capsule__image"><img src="./images/capsule.jpg"/></div>
+              <div class="card-capsule__caption">
+                <div class="card-capsule__title like-h3">Спортивная капсула</div>
+                <div class="card-capsule__description">
+                  <p>Спортивный стиль на каждый день, подобрали практичные и элегантные вещи</p>
+                </div>
+              </div></a><a class="card-capsule swiper-slide" href="#">
+              <div class="card-capsule__image"><img src="./images/capsule.jpg"/></div>
+              <div class="card-capsule__caption">
+                <div class="card-capsule__title like-h3">Спортивная капсула</div>
+                <div class="card-capsule__description">
+                  <p>Спортивный стиль на каждый день, подобрали практичные и элегантные вещи</p>
+                </div>
+              </div></a><a class="card-capsule swiper-slide" href="#">
+              <div class="card-capsule__image"><img src="./images/capsule.jpg"/></div>
+              <div class="card-capsule__caption">
+                <div class="card-capsule__title like-h3">Спортивная капсула</div>
+                <div class="card-capsule__description">
+                  <p>Спортивный стиль на каждый день, подобрали практичные и элегантные вещи</p>
+                </div>
+              </div></a><a class="card-capsule swiper-slide" href="#">
+              <div class="card-capsule__image"><img src="./images/capsule.jpg"/></div>
+              <div class="card-capsule__caption">
+                <div class="card-capsule__title like-h3">Спортивная капсула</div>
+                <div class="card-capsule__description">
+                  <p>Спортивный стиль на каждый день, подобрали практичные и элегантные вещи</p>
+                </div>
+              </div></a><a class="card-capsule swiper-slide" href="#">
+              <div class="card-capsule__image"><img src="./images/capsule.jpg"/></div>
+              <div class="card-capsule__caption">
+                <div class="card-capsule__title like-h3">Спортивная капсула</div>
+                <div class="card-capsule__description">
+                  <p>Спортивный стиль на каждый день, подобрали практичные и элегантные вещи</p>
+                </div>
+              </div></a><a class="card-capsule swiper-slide" href="#">
+              <div class="card-capsule__image"><img src="./images/capsule.jpg"/></div>
+              <div class="card-capsule__caption">
+                <div class="card-capsule__title like-h3">Спортивная капсула</div>
+                <div class="card-capsule__description">
+                  <p>Спортивный стиль на каждый день, подобрали практичные и элегантные вещи</p>
+                </div>
+              </div></a><a class="card-capsule swiper-slide" href="#">
+              <div class="card-capsule__image"><img src="./images/capsule.jpg"/></div>
+              <div class="card-capsule__caption">
+                <div class="card-capsule__title like-h3">Спортивная капсула</div>
+                <div class="card-capsule__description">
+                  <p>Спортивный стиль на каждый день, подобрали практичные и элегантные вещи</p>
+                </div>
+              </div></a><a class="card-capsule swiper-slide" href="#">
+              <div class="card-capsule__image"><img src="./images/capsule.jpg"/></div>
+              <div class="card-capsule__caption">
+                <div class="card-capsule__title like-h3">Спортивная капсула</div>
+                <div class="card-capsule__description">
+                  <p>Спортивный стиль на каждый день, подобрали практичные и элегантные вещи</p>
+                </div>
+              </div></a><a class="card-capsule swiper-slide" href="#">
+              <div class="card-capsule__image"><img src="./images/capsule.jpg"/></div>
+              <div class="card-capsule__caption">
+                <div class="card-capsule__title like-h3">Спортивная капсула</div>
+                <div class="card-capsule__description">
+                  <p>Спортивный стиль на каждый день, подобрали практичные и элегантные вещи</p>
+                </div>
+              </div></a>
+          </div>
+          <div class="swiper-button swiper-button-prev">
+            <svg class="icon-arrow swiper-button__arrow">
+              <use xlink:href="./images/sprite.svg#arrow"></use>
+            </svg>
+          </div>
+          <div class="swiper-button swiper-button-next">
+            <svg class="icon-arrow swiper-button__arrow">
+              <use xlink:href="./images/sprite.svg#arrow"></use>
+            </svg>
+          </div>
+        </div>
+      </section>
+      <section class="cards-slider-section container">
+        <div class="cards-slider-section__head">
+          <div class="cards-slider-section__title like-h3">Новинки</div>
+          <div class="cards-slider-section__more"><a class="link link_more" href="#">Показать больше
+              <svg class="icon-arrow link__icon">
+                <use xlink:href="./images/sprite.svg#arrow"></use>
+              </svg></a></div>
+        </div>
+        <div class="cards-slider cards-slider_product swiper">
+          <div class="cards-slider__slides swiper-wrapper">
+            <div class="card-product swiper-slide">
+              <div class="add-to-favourite add-to-favourite_active">
+                <svg class="icon-favourite add-to-favourite__icon">
+                  <use xlink:href="./images/sprite.svg#favourite"></use>
+                </svg>
+              </div><a class="card-product__image" href="#"><img src="./images/product.jpg"/></a>
+              <div class="card-product__caption"><a class="card-product__title" href="#">Спортивный костюм “Красота”</a>
+                <div class="card-product__prices">
+                  <div class="card-product__price card-product__price_old">16 999</div>
+                  <div class="card-product__price">16 999 ₽</div>
+                </div>
+              </div>
+            </div>
+            <div class="card-product swiper-slide">
+              <div class="add-to-favourite">
+                <svg class="icon-favourite add-to-favourite__icon">
+                  <use xlink:href="./images/sprite.svg#favourite"></use>
+                </svg>
+              </div><a class="card-product__image" href="#"><img src="./images/product.jpg"/></a>
+              <div class="card-product__caption"><a class="card-product__title" href="#">Спортивный костюм “Красота”</a>
+                <div class="card-product__prices">
+                  <div class="card-product__price card-product__price_old">16 999</div>
+                  <div class="card-product__price">16 999 ₽</div>
+                </div>
+              </div>
+            </div>
+            <div class="card-product swiper-slide">
+              <div class="add-to-favourite">
+                <svg class="icon-favourite add-to-favourite__icon">
+                  <use xlink:href="./images/sprite.svg#favourite"></use>
+                </svg>
+              </div><a class="card-product__image" href="#"><img src="./images/product.jpg"/></a>
+              <div class="card-product__caption"><a class="card-product__title" href="#">Спортивный костюм “Красота”</a>
+                <div class="card-product__prices">
+                  <div class="card-product__price card-product__price_old">16 999</div>
+                  <div class="card-product__price">16 999 ₽</div>
+                </div>
+              </div>
+            </div>
+            <div class="card-product swiper-slide">
+              <div class="add-to-favourite">
+                <svg class="icon-favourite add-to-favourite__icon">
+                  <use xlink:href="./images/sprite.svg#favourite"></use>
+                </svg>
+              </div><a class="card-product__image" href="#"><img src="./images/product.jpg"/></a>
+              <div class="card-product__caption"><a class="card-product__title" href="#">Спортивный костюм “Красота”</a>
+                <div class="card-product__prices">
+                  <div class="card-product__price card-product__price_old">16 999</div>
+                  <div class="card-product__price">16 999 ₽</div>
+                </div>
+              </div>
+            </div>
+            <div class="card-product swiper-slide">
+              <div class="add-to-favourite">
+                <svg class="icon-favourite add-to-favourite__icon">
+                  <use xlink:href="./images/sprite.svg#favourite"></use>
+                </svg>
+              </div><a class="card-product__image" href="#"><img src="./images/product.jpg"/></a>
+              <div class="card-product__caption"><a class="card-product__title" href="#">Спортивный костюм “Красота”</a>
+                <div class="card-product__prices">
+                  <div class="card-product__price card-product__price_old">16 999</div>
+                  <div class="card-product__price">16 999 ₽</div>
+                </div>
+              </div>
+            </div>
+            <div class="card-product swiper-slide">
+              <div class="add-to-favourite">
+                <svg class="icon-favourite add-to-favourite__icon">
+                  <use xlink:href="./images/sprite.svg#favourite"></use>
+                </svg>
+              </div><a class="card-product__image" href="#"><img src="./images/product.jpg"/></a>
+              <div class="card-product__caption"><a class="card-product__title" href="#">Спортивный костюм “Красота”</a>
+                <div class="card-product__prices">
+                  <div class="card-product__price card-product__price_old">16 999</div>
+                  <div class="card-product__price">16 999 ₽</div>
+                </div>
+              </div>
+            </div>
+            <div class="card-product swiper-slide">
+              <div class="add-to-favourite">
+                <svg class="icon-favourite add-to-favourite__icon">
+                  <use xlink:href="./images/sprite.svg#favourite"></use>
+                </svg>
+              </div><a class="card-product__image" href="#"><img src="./images/product.jpg"/></a>
+              <div class="card-product__caption"><a class="card-product__title" href="#">Спортивный костюм “Красота”</a>
+                <div class="card-product__prices">
+                  <div class="card-product__price card-product__price_old">16 999</div>
+                  <div class="card-product__price">16 999 ₽</div>
+                </div>
+              </div>
+            </div>
+            <div class="card-product swiper-slide">
+              <div class="add-to-favourite">
+                <svg class="icon-favourite add-to-favourite__icon">
+                  <use xlink:href="./images/sprite.svg#favourite"></use>
+                </svg>
+              </div><a class="card-product__image" href="#"><img src="./images/product.jpg"/></a>
+              <div class="card-product__caption"><a class="card-product__title" href="#">Спортивный костюм “Красота”</a>
+                <div class="card-product__prices">
+                  <div class="card-product__price card-product__price_old">16 999</div>
+                  <div class="card-product__price">16 999 ₽</div>
+                </div>
+              </div>
+            </div>
+            <div class="card-product swiper-slide">
+              <div class="add-to-favourite">
+                <svg class="icon-favourite add-to-favourite__icon">
+                  <use xlink:href="./images/sprite.svg#favourite"></use>
+                </svg>
+              </div><a class="card-product__image" href="#"><img src="./images/product.jpg"/></a>
+              <div class="card-product__caption"><a class="card-product__title" href="#">Спортивный костюм “Красота”</a>
+                <div class="card-product__prices">
+                  <div class="card-product__price card-product__price_old">16 999</div>
+                  <div class="card-product__price">16 999 ₽</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button swiper-button-prev">
+            <svg class="icon-arrow swiper-button__arrow">
+              <use xlink:href="./images/sprite.svg#arrow"></use>
+            </svg>
+          </div>
+          <div class="swiper-button swiper-button-next">
+            <svg class="icon-arrow swiper-button__arrow">
+              <use xlink:href="./images/sprite.svg#arrow"></use>
+            </svg>
+          </div>
+        </div>
+      </section>
+      <section class="promo-with-image">
+        <div class="promo-with-image__image"><img src="./images/promo.jpg"></div>
+        <div class="promo-with-image__content">
+          <div class="promo-with-image__content-inner">
+            <div class="promo-with-image__title like-h2">Бесплатная доставка с примеркой</div>
+            <div class="promo-with-image__text">
+              <p>Заказывайте любую вещь из каталога с бесплатной доставкой и примеркой перед оплатой</p>
+            </div>
+            <div class="promo-with-image__button"><a class="button" href="#">Подробнее о доставке</a></div>
+          </div>
+        </div>
+      </section>
+      <section class="cards-slider-section container">
+        <div class="cards-slider-section__head">
+          <div class="cards-slider-section__title like-h3">Платья</div>
+          <div class="cards-slider-section__more"><a class="link link_more" href="#">Показать больше
+              <svg class="icon-arrow link__icon">
+                <use xlink:href="./images/sprite.svg#arrow"></use>
+              </svg></a></div>
+        </div>
+        <div class="cards-slider cards-slider_product swiper">
+          <div class="cards-slider__slides swiper-wrapper">
+            <div class="card-product swiper-slide">
+              <div class="add-to-favourite add-to-favourite_active">
+                <svg class="icon-favourite add-to-favourite__icon">
+                  <use xlink:href="./images/sprite.svg#favourite"></use>
+                </svg>
+              </div><a class="card-product__image" href="#"><img src="./images/product.jpg"/></a>
+              <div class="card-product__caption"><a class="card-product__title" href="#">Спортивный костюм “Красота”</a>
+                <div class="card-product__prices">
+                  <div class="card-product__price card-product__price_old">16 999</div>
+                  <div class="card-product__price">16 999 ₽</div>
+                </div>
+              </div>
+            </div>
+            <div class="card-product swiper-slide">
+              <div class="add-to-favourite">
+                <svg class="icon-favourite add-to-favourite__icon">
+                  <use xlink:href="./images/sprite.svg#favourite"></use>
+                </svg>
+              </div><a class="card-product__image" href="#"><img src="./images/product.jpg"/></a>
+              <div class="card-product__caption"><a class="card-product__title" href="#">Спортивный костюм “Красота”</a>
+                <div class="card-product__prices">
+                  <div class="card-product__price card-product__price_old">16 999</div>
+                  <div class="card-product__price">16 999 ₽</div>
+                </div>
+              </div>
+            </div>
+            <div class="card-product swiper-slide">
+              <div class="add-to-favourite">
+                <svg class="icon-favourite add-to-favourite__icon">
+                  <use xlink:href="./images/sprite.svg#favourite"></use>
+                </svg>
+              </div><a class="card-product__image" href="#"><img src="./images/product.jpg"/></a>
+              <div class="card-product__caption"><a class="card-product__title" href="#">Спортивный костюм “Красота”</a>
+                <div class="card-product__prices">
+                  <div class="card-product__price card-product__price_old">16 999</div>
+                  <div class="card-product__price">16 999 ₽</div>
+                </div>
+              </div>
+            </div>
+            <div class="card-product swiper-slide">
+              <div class="add-to-favourite">
+                <svg class="icon-favourite add-to-favourite__icon">
+                  <use xlink:href="./images/sprite.svg#favourite"></use>
+                </svg>
+              </div><a class="card-product__image" href="#"><img src="./images/product.jpg"/></a>
+              <div class="card-product__caption"><a class="card-product__title" href="#">Спортивный костюм “Красота”</a>
+                <div class="card-product__prices">
+                  <div class="card-product__price card-product__price_old">16 999</div>
+                  <div class="card-product__price">16 999 ₽</div>
+                </div>
+              </div>
+            </div>
+            <div class="card-product swiper-slide">
+              <div class="add-to-favourite">
+                <svg class="icon-favourite add-to-favourite__icon">
+                  <use xlink:href="./images/sprite.svg#favourite"></use>
+                </svg>
+              </div><a class="card-product__image" href="#"><img src="./images/product.jpg"/></a>
+              <div class="card-product__caption"><a class="card-product__title" href="#">Спортивный костюм “Красота”</a>
+                <div class="card-product__prices">
+                  <div class="card-product__price card-product__price_old">16 999</div>
+                  <div class="card-product__price">16 999 ₽</div>
+                </div>
+              </div>
+            </div>
+            <div class="card-product swiper-slide">
+              <div class="add-to-favourite">
+                <svg class="icon-favourite add-to-favourite__icon">
+                  <use xlink:href="./images/sprite.svg#favourite"></use>
+                </svg>
+              </div><a class="card-product__image" href="#"><img src="./images/product.jpg"/></a>
+              <div class="card-product__caption"><a class="card-product__title" href="#">Спортивный костюм “Красота”</a>
+                <div class="card-product__prices">
+                  <div class="card-product__price card-product__price_old">16 999</div>
+                  <div class="card-product__price">16 999 ₽</div>
+                </div>
+              </div>
+            </div>
+            <div class="card-product swiper-slide">
+              <div class="add-to-favourite">
+                <svg class="icon-favourite add-to-favourite__icon">
+                  <use xlink:href="./images/sprite.svg#favourite"></use>
+                </svg>
+              </div><a class="card-product__image" href="#"><img src="./images/product.jpg"/></a>
+              <div class="card-product__caption"><a class="card-product__title" href="#">Спортивный костюм “Красота”</a>
+                <div class="card-product__prices">
+                  <div class="card-product__price card-product__price_old">16 999</div>
+                  <div class="card-product__price">16 999 ₽</div>
+                </div>
+              </div>
+            </div>
+            <div class="card-product swiper-slide">
+              <div class="add-to-favourite">
+                <svg class="icon-favourite add-to-favourite__icon">
+                  <use xlink:href="./images/sprite.svg#favourite"></use>
+                </svg>
+              </div><a class="card-product__image" href="#"><img src="./images/product.jpg"/></a>
+              <div class="card-product__caption"><a class="card-product__title" href="#">Спортивный костюм “Красота”</a>
+                <div class="card-product__prices">
+                  <div class="card-product__price card-product__price_old">16 999</div>
+                  <div class="card-product__price">16 999 ₽</div>
+                </div>
+              </div>
+            </div>
+            <div class="card-product swiper-slide">
+              <div class="add-to-favourite">
+                <svg class="icon-favourite add-to-favourite__icon">
+                  <use xlink:href="./images/sprite.svg#favourite"></use>
+                </svg>
+              </div><a class="card-product__image" href="#"><img src="./images/product.jpg"/></a>
+              <div class="card-product__caption"><a class="card-product__title" href="#">Спортивный костюм “Красота”</a>
+                <div class="card-product__prices">
+                  <div class="card-product__price card-product__price_old">16 999</div>
+                  <div class="card-product__price">16 999 ₽</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button swiper-button-prev">
+            <svg class="icon-arrow swiper-button__arrow">
+              <use xlink:href="./images/sprite.svg#arrow"></use>
+            </svg>
+          </div>
+          <div class="swiper-button swiper-button-next">
+            <svg class="icon-arrow swiper-button__arrow">
+              <use xlink:href="./images/sprite.svg#arrow"></use>
+            </svg>
+          </div>
+        </div>
+      </section>
+      <section class="categories-grid">
+              <div class="categories-grid-group">
+                <div class="categories-grid-group__images"></div>
+                <div class="categories-grid-group__caption">
+                  <div class="categories-grid-group__title like-h3">Натуральные материалы 1</div>
+                  <div class="categories-grid-group__text">Заказывайте любую вещь из каталога с бесплатной доставкой и примеркой перед оплатой</div>
+                </div>
+              </div>
+              <div class="categories-grid-group categories-grid-group_max">
+                <div class="categories-grid-group__images"></div>
+                <div class="categories-grid-group__caption">
+                  <div class="categories-grid-group__title like-h3">Натуральные материалы 2</div>
+                  <div class="categories-grid-group__text">Заказывайте любую вещь из каталога с бесплатной доставкой и примеркой перед оплатой</div>
+                </div>
+              </div>
+              <div class="categories-grid-group">
+                <div class="categories-grid-group__images"></div>
+                <div class="categories-grid-group__caption">
+                  <div class="categories-grid-group__title like-h3">Натуральные материалы 3</div>
+                  <div class="categories-grid-group__text">Заказывайте любую вещь из каталога с бесплатной доставкой и примеркой перед оплатой</div>
+                </div>
+              </div>
+      </section>
     </main>
     <footer class="footer">
       <div class="footer__subscribe-form">
@@ -291,7 +782,7 @@
               <div class="footer-menu col-xl-4">
                 <div class="footer-menu__title like-h3">Клиентам
                   <div class="footer-menu__title-arrow">
-                    <svg>
+                    <svg class="icon-arrow">
                       <use xlink:href="./images/sprite.svg#arrow"></use>
                     </svg>
                   </div>
@@ -307,7 +798,7 @@
               <div class="footer-menu col-xl-4">
                 <div class="footer-menu__title like-h3">О компании
                   <div class="footer-menu__title-arrow">
-                    <svg>
+                    <svg class="icon-arrow">
                       <use xlink:href="./images/sprite.svg#arrow"></use>
                     </svg>
                   </div>
@@ -323,7 +814,7 @@
               <div class="footer-menu col-xl-4">
                 <div class="footer-menu__title like-h3">Партнерам
                   <div class="footer-menu__title-arrow">
-                    <svg>
+                    <svg class="icon-arrow">
                       <use xlink:href="./images/sprite.svg#arrow"></use>
                     </svg>
                   </div>
@@ -344,38 +835,37 @@
         </div>
         <div class="footer__bottom">
           <div class="footer__copyright">© 2022, Alexander Bogdanov.<br>Все права защищены</div>
-          <div class="footer__creator">Создание дизайна — <span>Кожевников</span></div>
         </div>
       </div>
     </footer>
     <div class="bottom-navbar"><a class="bottom-navbar-btn" href="index.html">
         <div class="bottom-navbar-btn__icon">
-          <svg class="bottom-navbar-btn__icon-svg">
+          <svg class="icon-catalog bottom-navbar-btn__icon-svg">
             <use xlink:href="./images/sprite.svg#catalog"></use>
           </svg>
         </div>
         <div class="bottom-navbar-btn__label">Каталог</div></a><a class="bottom-navbar-btn" href="index.html">
         <div class="bottom-navbar-btn__icon">
-          <svg class="bottom-navbar-btn__icon-svg">
+          <svg class="icon-favourite bottom-navbar-btn__icon-svg">
             <use xlink:href="./images/sprite.svg#favourite"></use>
           </svg>
         </div>
         <div class="bottom-navbar-btn__label">Избранное</div></a><a class="bottom-navbar-btn" href="index.html">
         <div class="bottom-navbar-btn__icon bottom-navbar-btn__icon_indicator">
-          <svg class="bottom-navbar-btn__icon-svg">
+          <svg class="icon-cart bottom-navbar-btn__icon-svg">
             <use xlink:href="./images/sprite.svg#cart"></use>
           </svg>
         </div>
         <div class="bottom-navbar-btn__label">16 200 ₽</div></a><a class="bottom-navbar-btn" href="index.html">
         <div class="bottom-navbar-btn__icon">
-          <svg class="bottom-navbar-btn__icon-svg">
+          <svg class="icon-user bottom-navbar-btn__icon-svg">
             <use xlink:href="./images/sprite.svg#user"></use>
           </svg>
         </div>
         <div class="bottom-navbar-btn__label">Войти</div></a></div>
     <script src="./js/jquery3.min.js" defer></script>
     <script src="./js/bootstrap.bundle.min.js" defer></script>
-    <script src="./js/vue3.js" defer></script>
-    <script src="./js/common.js" defer></script>
+    <script src="./js/swiper-bundle.min.js" defer></script>
+    <script src="./js/common.min.js" defer></script>
   </body>
 </html>

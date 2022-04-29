@@ -1,0 +1,33 @@
+.cards-slider-section {
+    margin-top: 45px;
+    margin-bottom: 40px;
+    overflow: hidden;
+
+    @include desktop-min {
+        margin-top: 85px;
+        margin-bottom: 80px;
+    }
+
+    &__head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: 10px;
+    }
+}
+
+.cards-slider {
+    position: relative;
+    margin-top: 15px;
+    overflow: visible;
+
+    &_product {
+        .swiper-button {
+            top: 122px;
+
+            @include tablet-min {
+                top: 200px;
+            }
+        }
+    }
+}

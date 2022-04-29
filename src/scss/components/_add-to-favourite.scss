@@ -1,0 +1,19 @@
+.add-to-favourite {
+    $modActive: & + '_active';
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+
+    &__icon {
+        transition: all $transitionLink;
+
+        #{$modActive} & {
+            fill: var(--alizarin);
+            stroke: var(--alizarin);
+        }
+    }
+}

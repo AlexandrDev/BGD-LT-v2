@@ -1,3 +1,5 @@
+include ../../mixins/cards/_card-product-search
+
 .search
   .search__overlay
   .search__container.container
@@ -8,6 +10,15 @@
         .search-row__clear.col-auto
           a(href="#")
             +svg('close').search-row__clear-icon
+
+      .search-results
+        .search-results__items
+          .search-results__item
+            +card-product-search
+          .search-results__item
+            +card-product-search
+          .search-results__item
+            +card-product-search
 
       .search-history
         .search-history__top.row
@@ -25,11 +36,10 @@
                   a(href="#")
                     +svg('close').search-history__item-remove-icon
 
-      .search-suggestions
+
+      //-.search-suggestions
         .search-suggestions__top.row
           .search-suggestions__title.col
             .like-h4 В тренде/Актуально
-          .search-suggestions__clear.col-auto
-            a(href="#").search-suggestions__clear-btn Очистить
         .search-suggestions__items
           .search-suggestions__item

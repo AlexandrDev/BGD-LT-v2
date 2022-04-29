@@ -23,7 +23,7 @@
         }
     }
 
-    .main-menu-opened & {
+    .mobile-menu-opened & {
         span {
             &:nth-child(1) {
                 transform: rotateZ(45deg);

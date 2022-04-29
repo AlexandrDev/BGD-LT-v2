@@ -1,0 +1,18 @@
+section.main-slider.swiper
+  .main-slider__slides.swiper-wrapper
+    for i in [1,2,3]
+      .slide.swiper-slide
+        .slide__background
+          picture
+            source(srcset=images_path + 'main-banner-xs.jpg', media="(max-width: 480px)")
+            source(srcset=images_path + 'main-banner-md.jpg', media="(max-width: 770px)")
+            source(srcset=images_path + 'main-banner-xl.jpg', media="(max-width: 1200px)")
+            img(src=images_path + 'main-banner.jpg')
+        .slide__content
+          .slide__container.container
+            .slide__overtitle.like-h5 Коллекция весна-лето 2022 #{i}
+            .slide__title.like-h2 Прогуляйтесь по «Таинственному саду» и найдите свой сказочный образ! #{i}
+            .slide__button
+              a(href="#").button.button_white Перейти к коллекции #{i}
+
+  .swiper-pagination.container

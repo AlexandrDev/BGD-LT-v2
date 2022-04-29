@@ -1,0 +1,46 @@
+.swiper {
+    &-button {
+        $modPrev: & + '-prev';
+        $modNext: & + '-next';
+
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background: #F4F4F4;
+        border-radius: 40px;
+        opacity: 1;
+        transition: opacity $transitionSlider;
+        cursor: pointer;
+
+        &-prev {
+            left: 5px;
+        }
+
+        &-next {
+            right: 5px;
+        }
+
+        &-disabled {
+            opacity: 0;
+        }
+
+        &__arrow {
+            width: 25px;
+            height: 25px;
+
+            #{$modPrev} & {
+                transform: rotate(90deg);
+            }
+
+            #{$modNext} & {
+                transform: rotate(-90deg);
+            }
+        }
+    }
+}

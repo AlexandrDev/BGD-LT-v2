@@ -1,3 +1,3 @@
 mixin svg(svg_id)
-  svg()&attributes(attributes)
+  svg(class='icon-' + svg_id)&attributes(attributes)
     use(xlink:href=images_path + 'sprite.svg#' + svg_id)

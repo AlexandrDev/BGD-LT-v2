@@ -1,0 +1,27 @@
+include cards/_card-capsule
+include cards/_card-product
+
+mixin cards-slider-section(title, more_text, type)
+  section.cards-slider-section.container
+    .cards-slider-section__head
+      .cards-slider-section__title.like-h3= title
+      .cards-slider-section__more
+        a(href="#").link.link_more
+          | #{more_text}
+          +svg('arrow').link__icon
+
+    .cards-slider(class="cards-slider_" + type).swiper
+      .cards-slider__slides.swiper-wrapper
+        for i in [1,2,3,4,5,6,7,8,9]
+          if type === 'capsule'
+            +card-capsule
+          else if type === 'product'
+            if i === 1
+              +card-product(true)
+            else
+              +card-product()
+
+      .swiper-button.swiper-button-prev
+        +svg('arrow').swiper-button__arrow
+      .swiper-button.swiper-button-next
+        +svg('arrow').swiper-button__arrow

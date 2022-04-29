@@ -1,8 +1,5 @@
 .footer {
-
-
     &__container {
-        --bs-gutter-x: 15px;
         padding-top: 40px;
         padding-bottom: 40px;
 
@@ -13,10 +10,6 @@
 
     &__subscribe-form {
         background-color: var(--active);
-
-        .container {
-            --bs-gutter-x: 15px;
-        }
     }
 
     &__menus {

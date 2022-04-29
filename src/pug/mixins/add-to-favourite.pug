@@ -1,0 +1,7 @@
+mixin add-to-favourite(active)
+  if active
+    .add-to-favourite.add-to-favourite_active
+      +svg('favourite').add-to-favourite__icon
+  else
+    .add-to-favourite
+      +svg('favourite').add-to-favourite__icon

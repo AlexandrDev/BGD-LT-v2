@@ -1,8 +1,14 @@
-body.has-bottom-navbar {
-    padding-bottom: 50px;
+body {
+    @include desktop {
+        padding-bottom: 50px;
+    }
 }
 
 .bottom-navbar {
+    @include desktop-min {
+        display: none;
+    }
+
     position: fixed;
     left: 0;
     bottom: 0;

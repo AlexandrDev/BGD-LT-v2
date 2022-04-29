@@ -1,0 +1,20 @@
+mixin categories-grid-group(images, title, text)
+  .categories-grid-group
+    .categories-grid-group__images
+    .categories-grid-group__caption
+      .categories-grid-group__title.like-h3= title
+      .categories-grid-group__text= text
+
+
+mixin categories-grid-group-max(images, title, text)
+  .categories-grid-group.categories-grid-group_max
+    .categories-grid-group__images
+    .categories-grid-group__caption
+      .categories-grid-group__title.like-h3= title
+      .categories-grid-group__text= text
+
+
+section.categories-grid
+  +categories-grid-group(['','',''], 'Натуральные материалы 1', 'Заказывайте любую вещь из каталога с бесплатной доставкой и примеркой перед оплатой')
+  +categories-grid-group-max(['','',''], 'Натуральные материалы 2', 'Заказывайте любую вещь из каталога с бесплатной доставкой и примеркой перед оплатой')
+  +categories-grid-group(['','',''], 'Натуральные материалы 3', 'Заказывайте любую вещь из каталога с бесплатной доставкой и примеркой перед оплатой')

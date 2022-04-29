@@ -6,24 +6,37 @@
 @import "layout/typography";
 @import "layout/input";
 @import "layout/button";
+@import "layout/link";
+@import "layout/icons";
 
 @import "components/header/header";
 @import "components/header/header-top-info";
 @import "components/header/logo";
 @import "components/header/hamburger";
 @import "components/header/header-button";
-@import "components/header/main-menu/main-menu";
-@import "components/header/main-menu/main-menu-item";
-@import "components/header/main-menu/main-menu-city";
-@import "components/header/main-menu/main-menu-bottom";
+@import "components/header/mobile-menu/mobile-menu";
+@import "components/header/mobile-menu/mobile-menu-item";
+//@import "components/header/mobile-menu/mobile-menu-city";
+@import "components/header/mobile-menu/mobile-menu-bottom";
 @import "components/header/search/search";
 @import "components/header/search/search-row";
+@import "components/header/search/search-results";
 @import "components/header/search/search-history";
 @import "components/header/search/search-suggestions";
 @import "components/footer/footer";
 @import "components/footer/footer-menu";
 @import "components/footer/subscribe-form";
 
+@import "components/add-to-favourite";
 @import "components/dropdown";
 @import "components/socials";
 @import "components/bottom-navbar";
+
+@import "components/sliders/swiper";
+@import "components/sliders/main-slider";
+@import "components/sliders/cards-slider";
+@import "components/cards/card-capsule";
+@import "components/cards/card-product";
+
+@import "components/promo-with-image";
+@import "components/categories-grid";

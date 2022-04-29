@@ -32,36 +32,36 @@ $(function($) {
     /*
      * fix transition
      */
-    $('.main-menu, .search').show();
+    $('.mobile-menu, .search').show();
 
 
     /*
-     * Main menu
+     * Mobile menu
      */
-    const MainMenu = function () {
-        $('[data-main-menu-open]').on(click_event, function() {
-            toggleModal('main-menu')
+    const MobileMenu = function () {
+        $('[data-mobile-menu-open]').on(click_event, function() {
+            toggleModal('mobile-menu')
         })
 
-        $('.main-menu__close-btn, .main-menu__overlay').each(function () {
+        $('.mobile-menu__close-btn, .mobile-menu__overlay').each(function () {
           $(this).on(click_event, function() {
               closeModals()
           })
         })
 
-        $('.main-menu-item_parent').each(function () {
+        $('.mobile-menu-item_parent').each(function () {
             const $item = $(this),
-                $arrow = $item.find('> .main-menu-item__link > .main-menu-item__arrow'),
-                $submenu = $item.find('> .main-menu-item__submenu');
+                $arrow = $item.find('> .mobile-menu-item__link > .mobile-menu-item__arrow'),
+                $submenu = $item.find('> .mobile-menu-item__submenu');
 
             $arrow.on(click_event, function () {
-                $item.toggleClass('main-menu-item_opened')
+                $item.toggleClass('mobile-menu-item_opened')
                 $submenu.slideToggle(200)
             })
         })
     }
 
-    new MainMenu()
+    new MobileMenu()
 
 
     /*
@@ -116,4 +116,40 @@ $(function($) {
     }
 
     new FooterMenu()
+
+
+    /*
+     * Slider
+     */
+    $.fn.initSlider = function (options) {
+        let config = {
+            slidesPerView: 'auto',
+            navigation: {
+                nextEl: this.find('.swiper-button-next')[0],
+                prevEl: this.find('.swiper-button-prev')[0],
+            },
+            pagination: {
+                el: this.find('.swiper-pagination')[0],
+                clickable: true
+            },
+            ...options
+        };
+
+        new Swiper(this[0], config)
+    }
+
+    $('.main-slider').each(function () {
+        $(this).initSlider({
+            loop: true,
+            effect: "fade",
+            fadeEffect: {
+                //crossFade: true
+            },
+        })
+    })
+
+    $('.cards-slider').each(function () {
+        $(this).initSlider()
+    })
+
 })

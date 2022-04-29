@@ -1,0 +1,12 @@
+include ../add-to-favourite
+
+mixin card-product(fav_active)
+  .card-product.swiper-slide
+    +add-to-favourite(fav_active)
+    a(href='#').card-product__image
+      img(src=images_path + 'product.jpg')
+    .card-product__caption
+      a(href='#').card-product__title Спортивный костюм “Красота”
+      .card-product__prices
+        .card-product__price.card-product__price_old 16 999
+        .card-product__price 16 999 ₽

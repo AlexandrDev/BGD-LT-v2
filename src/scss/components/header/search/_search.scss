@@ -29,6 +29,7 @@
     }
 
     &__container {
+        --bs-gutter-x: 10px;
         position: relative;
         background: var(--white);
         opacity: 0;

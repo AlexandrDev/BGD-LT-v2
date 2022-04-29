@@ -1,23 +1,20 @@
 extends layout/_layout
 
+include mixins/_cards-slider-section
+
 block variables
   - var title = 'Главная'
 
 block content
-  section.container
-    | main slider
 
-  section.container
-    | capsules slider
+  include components/sliders/_main-slider
 
-  section.container
-    | products slider
+  +cards-slider-section('Впечатления', 'Показать больше', 'capsule')
 
-  section.container
-    | promo block
+  +cards-slider-section('Новинки', 'Показать больше', 'product')
 
-  section.container
-    | products slider
+  include components/_promo-with-image
 
-  section.container
-    | categories grid
+  +cards-slider-section('Платья', 'Показать больше', 'product')
+
+  include components/_categories-grid

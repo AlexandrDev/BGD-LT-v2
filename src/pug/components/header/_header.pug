@@ -5,10 +5,18 @@ header.header
 
     .header-main.row
       .header-main__left.col
-        .header-button(data-main-menu-open)
+        .header-button.header-button_icon(data-mobile-menu-open).d-xl-none
           .header-button__icon
             +svg('hamburger')
           .header-button__label Меню
+        a(href="#").header-button.header-button_link.d-none.d-xl-flex
+          .header-button__label Каталог
+        a(href="#").header-button.header-button_link.d-none.d-xl-flex
+          .header-button__label Адреса магазинов
+        a(href="#").header-button.header-button_link.d-none.d-xl-flex
+          .header-button__label О нас
+        a(href="#").header-button.header-button_link.d-none.d-xl-flex
+          .header-button__label Контакты
 
       .header-main__logo.col
         .logo
@@ -16,10 +24,22 @@ header.header
             img(src=images_path + "logo.svg", alt="").logo__image
 
       .header-main__right.col
-        .header-button(data-search-open)
+        a(href="#").header-button.header-button_icon.d-none.d-xl-block
+          .header-button__icon
+            +svg('user')
+          .header-button__label Войти
+        .header-button.header-button_icon(data-search-open)
           .header-button__icon
             +svg('search')
           .header-button__label Поиск
+        a(href="#").header-button.header-button_icon.d-none.d-xl-block
+          .header-button__icon
+            +svg('favourite')
+          .header-button__label Избранное
+        a(href="#").header-button.header-button_icon.d-none.d-xl-block
+          .header-button__icon.header-button__icon_indicator
+            +svg('cart')
+          .header-button__label 16 200 ₽
 
   include _mobile-menu
   include _search
